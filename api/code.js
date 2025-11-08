@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).send("Method Not Allowed");
 
   const { prompt } = req.body;
-  const apiKey = process.env.DEEPSEEK_API_KEY;
+  const apiKey = process.env.DEEPSEEK_API_KEY;sk-ccf5a616bf584a6a86c8feb857a45fd7
 
   if (!apiKey) {
     return res.status(500).json({ error: "API Key DeepSeek belum diatur di environment." });
